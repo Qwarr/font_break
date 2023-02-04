@@ -24,10 +24,10 @@ vec3 gradient_mode()
 void main()
 {
     lowp vec3 gradient_norml = gradient_mode();
-    mediump vec4 sample = texture2D(texture_sampler, var_texcoord0);
+    mediump vec4 sample_ex = texture2D(texture_sampler, var_texcoord0);
 
-    mediump float distance        = sample.x;
-    mediump float distance_shadow = sample.z;
+    mediump float distance        = sample_ex.x;
+    mediump float distance_shadow = sample_ex.z;
 
     lowp float sdf_edge      = var_sdf_params.x;
     lowp float sdf_outline   = var_sdf_params.y;
